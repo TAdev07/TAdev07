@@ -39,3 +39,8 @@ function CountWords (this_field) {
 		document.getElementById('output').value = list_emoji + ' (sub:' +value_init + ' )';
 	}
 }
+
+$("#copyAll").click(function(){
+    $("#output").select();
+    document.execCommand('copy');
+});
