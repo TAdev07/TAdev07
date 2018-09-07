@@ -1,8 +1,13 @@
 var clk_hide = false;
 var arr_emoji = ['🔴','♥️','♣️','♠️', '🔳','🔵','💙','🔺','🔶','⚫','♦️'];
+var obj = {
+	word_count : 0,
+	str : ""
+}
 
 function onHandleChange (e){
 	clk_hide = e.checked;
+	render(obj.str, obj.word_count);
 }
 
 function CountWords (this_field) {
@@ -18,15 +23,25 @@ function CountWords (this_field) {
     str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
     str = str.replace(/ + /g," ");
     fullStr = str.trim()  + " "; 
-    var list_emoji = '';
+    
 	var initial_whitespace_rExp = /^[^A-Za-z0-9]+/gi;
 	var left_trimmedStr = fullStr.replace(initial_whitespace_rExp, "");
 	var non_alphanumerics_rExp = rExp = /[^A-Za-z0-9]+/gi;
 	var cleanedStr = left_trimmedStr.replace(non_alphanumerics_rExp, " ");
 	var splitString = cleanedStr.split(" ");
 	var word_count = splitString.length -1;
-	var value_init = document.getElementById('input').value;
+	
+	render(str,word_count);
+	return obj = {
+		word_count,
+		str
+	}
+}
 
+function render(str,word_count){
+	console.log(word_count);
+	var value_init = document.getElementById('input').value;
+	var list_emoji = '';
 	ar = str.split(' ');
 	for(i = 0, len = arr_emoji.length; i < word_count; i++){
 		var num = ar[i].split('')[0].charCodeAt(0)%10;
