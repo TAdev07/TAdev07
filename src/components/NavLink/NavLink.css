@@ -1,0 +1,91 @@
+i.fa {
+    padding-right: 15px;
+}
+
+.isop-filter li.active a {
+    color: #fff;
+}
+
+.isop-filter > li:hover a,
+.isop-filter li.active a {
+    background: #346abb;
+}
+
+.isop-filter li a {
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.isop-filter > li:hover a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.resume nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+div#nav-tabis {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: -2px;
+}
+
+.isop-filter li a {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: bold;
+    color: #000;
+    border-radius: 0px;
+}
+
+ul.isop-filter li {
+    width: 20%;
+}
+
+.navbar-toggle {
+    width: 100%;
+    margin: 0px;
+    border: none;
+    height: 50px;
+    padding: 0px 15px;
+    background: #fff;
+    float: none;
+    display: none;
+}
+
+.icon-nav {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    float: right;
+}
+
+.nav-title {
+    font-weight: bold;
+    float: left;
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+    #nav-tabis {
+        display: none;
+    }
+
+    button.navbar-toggle {
+        display: block;
+    }
+}
+@media only screen and (max-width: 479px) {
+}
