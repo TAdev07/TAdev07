@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import DataPersonalInfo from './dataLocal/DataPersonalInfo';
 import DataServices from './dataLocal/DataServices';
 import DataSkills from './dataLocal/DataSkills';
+import DataSocials from './dataLocal/DataSocials';
 import './App.css';
 
 class App extends Component {
@@ -17,11 +18,17 @@ class App extends Component {
             personalInfo: DataPersonalInfo,
             dataServices: DataServices,
             dataSkills: DataSkills,
+            dataSocials: DataSocials,
         };
     }
 
     render() {
-        const {personalInfo, dataServices, dataSkills} = this.state;
+        const {
+            personalInfo,
+            dataServices,
+            dataSkills,
+            dataSocials,
+        } = this.state;
 
         return (
             <div className="App">
@@ -31,7 +38,10 @@ class App extends Component {
                         <TopHead />
                         <div className="row">
                             <div className="col-md-4">
-                                <SideBar personalInfo={personalInfo} />
+                                <SideBar
+                                    personalInfo={personalInfo}
+                                    dataSocials={dataSocials}
+                                />
                             </div>
                             <div className="col-md-8">
                                 <div className="tab-content">

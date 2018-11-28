@@ -13,7 +13,7 @@ export default function Services({dataServices}) {
                     >
                         <div className="icon-box i-large ib-black">
                             <div className="ib-icon">
-                                <i className={`${item.icon}`} />
+                                <i className={item.icon} />
                             </div>
                             <div className="ib-info">
                                 <h4 className="h6">{item.title}</h4>
