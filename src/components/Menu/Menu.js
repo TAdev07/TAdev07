@@ -3,22 +3,41 @@ import React from 'react';
 import MenuItem from './MenuItem';
 import styles from './Menu.module.css';
 
-export default function NavLink({dataMenu = {}}) {
-  return (
-    <nav className={styles.wrapper}>
-      {/* Brand and toggle get grouped for better mobile display */}
-      <button type="button" className={styles.toggle}>
-        <span className={styles.title}>MENU</span>
-        <span className={`fa fa-navicon ${styles.button}`} />
-      </button>
-      {/* Collect the nav links, forms, and other content for toggling */}
-      <div className={styles.navBar}>
-        <ul className={styles.nav}>
-          {dataMenu.map((item, index) => (
-            <MenuItem key={index} menuItem={item} />
-          ))}
-        </ul>
-      </div>
-    </nav>
-  );
+export default class NavLink extends React.Component {
+  state = {
+    showMenu: false,
+  };
+
+  onShowMenu = () => {
+    this.setState({showMenu: !this.state.showMenu});
+  };
+  render() {
+    const {dataMenu} = this.props;
+    return (
+      <nav className={styles.wrapper}>
+        <div
+          className={`${styles.navBar} ${
+            this.state.showMenu ? styles.show : ''
+          }`}
+        >
+          <div className={styles.close} onClick={this.onShowMenu} />
+          <ul className={styles.nav}>
+            {dataMenu.map((item, index) => (
+              <MenuItem key={index} menuItem={item} />
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.toggle}>
+          <span className={styles.title}>MENU</span>
+          <span
+            className={`fa ${this.state.showMenu ? 'fa-times' : 'fa-navicon'} ${
+              styles.button
+            }`}
+            onClick={this.onShowMenu}
+          />
+        </div>
+      </nav>
+    );
+  }
 }

@@ -242,39 +242,11 @@ ul {
   margin-bottom: 15px;
 }
 
-.ib-icon .fa {
-  padding: 0;
-}
-
 .ib-info .h6 {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-.accordion .panel-body {
-  color: #808080;
-  padding: 0px;
-  padding-top: 15px;
-  line-height: 24px;
-  font-size: 14px;
-  text-align: left;
-}
-
-.accordion .panel-default .panel-heading span {
-  font-size: 13px;
-  width: 100%;
-  font-weight: 600;
-  color: #808080;
-  background: #fff;
-  padding: 5px 0px;
-  padding-left: 40px;
-  line-height: 20px;
-  display: inline-block;
-  text-transform: none;
-  border-radius: 20px;
-  cursor: pointer;
 }
 
 .rights {
@@ -305,4 +277,7 @@ ul {
   }
 }
 @media (max-width: 575.98px) {
+  .top-head-title h4 {
+    padding-left: 15px;
+  }
 }

@@ -3,6 +3,10 @@ import Menu from './components/Menu/Menu';
 import TopHead from './components/TopHead';
 import SideBar from './components/SideBar/SideBar';
 import TabAboutMe from './components/TabAboutMe/TabAboutMe';
+import TabResume from './components/TabResume/TabResume';
+import TabPortfolio from './components/TabPortfolio/TabPortfolio';
+import TabBlog from './components/TabBlog/TabBlog';
+import TabContactMe from './components/TabContactMe/TabContactMe';
 import Footer from './components/Footer';
 
 import DataMenu from './dataLocal/DataMenu';

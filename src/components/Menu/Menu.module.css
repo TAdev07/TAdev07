@@ -16,6 +16,9 @@
   padding: 0px 15px;
   background: #fff;
   display: none;
+  position: fixed;
+  box-shadow: 0 7px 8px -7px #777;
+  z-index: 9;
 }
 
 .title {
@@ -30,6 +33,12 @@
   padding: 10px;
   float: right;
   margin-top: 7px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #346abb;
+  color: #fff;
 }
 
 .navBar {
@@ -37,16 +46,23 @@
   margin: auto;
 }
 
+.navBar.show {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100%;
+}
+
 .nav {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  transition: all 0.4s ease-out;
 }
 .navItem {
   width: 20%;
 }
-.nav > .navItem > a {
+.navItem > a {
   text-transform: uppercase;
   transition: all 0.4s ease-in-out;
   text-align: center;
@@ -58,7 +74,7 @@
   display: block;
 }
 
-.nav > .navItem:hover > a,
+.navItem:hover > a,
 .nav li.active a {
   text-decoration: none;
   color: #fff;
@@ -71,6 +87,42 @@
   }
 
   .navBar {
-    display: none;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .navBar.show {
+    opacity: 1;
+  }
+
+  .nav {
+    flex-direction: column;
+    left: -100%;
+    background-color: #fff;
+    transition: all 0.4s ease-out;
+    width: 70%;
+    height: 100vh;
+    top: 50px;
+    position: absolute;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .show .nav {
+    left: 0;
+  }
+
+  .navItem > a {
+    text-align: left;
+    padding: 20px;
+  }
+  .close {
+    position: absolute;
+    height: 100vh;
+    width: 30%;
+    right: 0;
+    top: 50px;
   }
 }
