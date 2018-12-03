@@ -1,9 +1,8 @@
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1170px;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 
 .row {
@@ -21,26 +20,26 @@
 }
 
 .md_4 {
-  flex: 0 0 calc(33.3333% - 30px);
-  max-width: calc(33.3333% - 30px);
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   padding: 0 15px;
 }
 
 .md_8 {
-  flex: 0 0 calc(66.6666% - 30px);
-  max-width: calc(66.6666% - 30px);
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%;
   padding: 0 15px;
 }
 
 .sm_4 {
-  flex: 0 0 calc(33.3333% - 30px);
-  max-width: calc(33.3333% - 30px);
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
   padding: 0 15px;
 }
 
 .sm_8 {
-  flex: 0 0 calc(66.6666% - 30px);
-  max-width: calc(66.6666% - 30px);
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%;
   padding: 0 15px;
 }
 
@@ -66,13 +65,13 @@
   }
 
   .md_4 {
-    flex: 0 0 calc(100% - 30px);
-    max-width: calc(100% - 30px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .md_8 {
-    flex: 0 0 calc(100% - 30px);
-    max-width: calc(100% - 30px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
@@ -82,13 +81,13 @@
   }
 
   .sm_4 {
-    flex: 0 0 calc(100% - 30px);
-    max-width: calc(100% - 30px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .sm_8 {
-    flex: 0 0 calc(100% - 30px);
-    max-width: calc(100% - 30px);
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 

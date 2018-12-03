@@ -1,7 +1,6 @@
 import React from 'react';
 
 import MenuItem from './MenuItem';
-import './Menu.css';
 import styles from './Menu.module.css';
 
 export default function NavLink({dataMenu = {}}) {

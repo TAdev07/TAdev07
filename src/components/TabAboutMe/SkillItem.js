@@ -24,12 +24,7 @@ export default class Skills extends React.Component {
                   showSkillText ? Panel.active : ''
                 }`}
               >
-                <span
-                  onClick={this.showText}
-                  className={`${showSkillText ? 'in' : ''}`}
-                >
-                  {skill}
-                </span>
+                <span onClick={this.showText}>{skill}</span>
               </h4>
             </div>
           </div>
@@ -46,10 +41,8 @@ export default class Skills extends React.Component {
               </div>
             </div>
             {/* Skillls Text */}
-            <div
-              className={`panel-collapse collapse ${showSkillText ? 'in' : ''}`}
-            >
-              <div className={Panel.body}>
+            <div className={Panel.body}>
+              <div className={showSkillText ? Panel.active : ''}>
                 <p>{text}</p>
               </div>
             </div>
