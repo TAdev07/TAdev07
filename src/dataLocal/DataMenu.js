@@ -2,27 +2,27 @@ const DataMenu = [
   {
     title: 'about me',
     icon: 'fa fa-user-o',
-    link: '#about-me',
+    link: '/',
   },
   {
     title: 'RESUME',
     icon: 'fa fa-book',
-    link: '#resume',
+    link: '/resume',
   },
   {
     title: 'PORTFOLIO',
     icon: 'fa fa-rocket',
-    link: '#portfolio',
+    link: '/portfolio',
   },
   {
     title: 'BLOG',
     icon: 'fa fa-pencil-square-o',
-    link: '#blog',
+    link: '/blog',
   },
   {
     title: 'CONTACT ME',
     icon: 'fa fa-pencil',
-    link: '#contact',
+    link: '/contact',
   },
 ];
 

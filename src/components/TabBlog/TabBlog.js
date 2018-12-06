@@ -3,7 +3,7 @@ import React from 'react';
 export default function TabAboutMe() {
   return (
     <div className="inside-sec">
-      <h5 className="tittle">I’m Web Designer</h5>
+      <h5 className="tittle">Blog</h5>
       <div className="padding-20">
         <p style={{textAlign: 'justify'}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh

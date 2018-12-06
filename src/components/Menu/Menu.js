@@ -11,6 +11,11 @@ export default class NavLink extends React.Component {
   onShowMenu = () => {
     this.setState({showMenu: !this.state.showMenu});
   };
+
+  onHiddenMenu = () => {
+    this.setState({showMenu: false});
+  };
+
   render() {
     const {dataMenu} = this.props;
     return (
@@ -23,7 +28,11 @@ export default class NavLink extends React.Component {
           <div className={styles.close} onClick={this.onShowMenu} />
           <ul className={styles.nav}>
             {dataMenu.map((item, index) => (
-              <MenuItem key={index} menuItem={item} />
+              <MenuItem
+                key={index}
+                menuItem={item}
+                onHiddenMenu={this.onHiddenMenu}
+              />
             ))}
           </ul>
         </div>

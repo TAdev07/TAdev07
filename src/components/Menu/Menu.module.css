@@ -75,7 +75,7 @@
 }
 
 .navItem:hover > a,
-.nav li.active a {
+.nav li .active {
   text-decoration: none;
   color: #fff;
   background: #346abb;
@@ -88,7 +88,8 @@
 
   .navBar {
     opacity: 0;
-    position: absolute;
+    position: fixed;
+    z-index: 9;
   }
 
   .navBar.show {
