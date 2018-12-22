@@ -6,8 +6,8 @@ import Skills from './Skills';
 
 export default function TabAboutMe({
   personalInfo = [],
-  dataServices = [],
-  dataSkills = [],
+  servicesData = [],
+  skillsData = [],
 }) {
   return (
     <div className="inside-sec">
@@ -15,8 +15,8 @@ export default function TabAboutMe({
       <section className="about-me padding-top-10">
         <PersonalInfo personalInfo={personalInfo} />
         <JobInfo />
-        <Services dataServices={dataServices} />
-        <Skills dataSkills={dataSkills} />
+        <Services servicesData={servicesData} />
+        <Skills skillsData={skillsData} />
       </section>
     </div>
   );

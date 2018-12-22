@@ -17,7 +17,7 @@ export default class NavLink extends React.Component {
   };
 
   render() {
-    const {dataMenu} = this.props;
+    const {menuData} = this.props;
     return (
       <nav className={styles.wrapper}>
         <div
@@ -27,7 +27,7 @@ export default class NavLink extends React.Component {
         >
           <div className={styles.close} onClick={this.onShowMenu} />
           <ul className={styles.nav}>
-            {dataMenu.map((item, index) => (
+            {menuData.map((item, index) => (
               <MenuItem
                 key={index}
                 menuItem={item}

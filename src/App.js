@@ -1,25 +1,20 @@
 import React, {Component} from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Menu from './components/Menu/Menu';
 import TopHead from './components/TopHead';
 import SideBar from './components/SideBar/SideBar';
 import TabAboutMe from './components/TabAboutMe/TabAboutMe';
 import TabResume from './components/TabResume/TabResume';
-import TabPortfolio from './components/TabPortfolio/TabPortfolio';
+import TabAmazing from './components/TabAmazing/TabAmazing';
 import TabBlog from './components/TabBlog/TabBlog';
 import TabContactMe from './components/TabContactMe/TabContactMe';
 import Footer from './components/Footer';
-import DataMenu from './dataLocal/DataMenu';
-import DataPersonalInfo from './dataLocal/DataPersonalInfo';
-import DataServices from './dataLocal/DataServices';
-import DataSkills from './dataLocal/DataSkills';
-import DataSocials from './dataLocal/DataSocials';
+import menuData from './localData/menuData';
+import personalInfoData from './localData/personalInfoData';
+import servicesData from './localData/servicesData';
+import skillsData from './localData/skillsData';
+import socialsData from './localData/socialsData';
 import './App.css';
 import Layout from './styles/layout.module.css';
 
@@ -27,21 +22,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      personalInfo: DataPersonalInfo,
-      dataServices: DataServices,
-      dataSkills: DataSkills,
-      dataSocials: DataSocials,
-      dataMenu: DataMenu,
+      personalInfo: personalInfoData,
+      servicesData: servicesData,
+      skillsData: skillsData,
+      socialsData: socialsData,
+      menuData: menuData,
     };
   }
 
   render() {
     const {
       personalInfo,
-      dataServices,
-      dataSkills,
-      dataSocials,
-      dataMenu,
+      servicesData,
+      skillsData,
+      socialsData,
+      menuData,
     } = this.state;
 
     return (
@@ -49,13 +44,13 @@ class App extends Component {
         <div className="App">
           <div className="resume">
             <div className={Layout.container}>
-              <Menu dataMenu={dataMenu} />
+              <Menu menuData={menuData} />
               <TopHead />
               <div className={Layout.row}>
                 <div className={Layout.md_4}>
                   <SideBar
                     personalInfo={personalInfo}
-                    dataSocials={dataSocials}
+                    socialsData={socialsData}
                   />
                 </div>
                 <div className={Layout.md_8}>
@@ -67,13 +62,13 @@ class App extends Component {
                         render={() => (
                           <TabAboutMe
                             personalInfo={personalInfo}
-                            dataServices={dataServices}
-                            dataSkills={dataSkills}
+                            servicesData={servicesData}
+                            skillsData={skillsData}
                           />
                         )}
                       />
                       <Route path="/resume" render={() => <TabResume />} />
-                      <Route path="/portfolio" component={TabPortfolio} />
+                      <Route path="/amazing" component={TabAmazing} />
                       <Route path="/blog" component={TabBlog} />
                       <Route path="/contact" component={TabContactMe} />
                     </Switch>
