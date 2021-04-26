@@ -3,7 +3,7 @@
 
 Hi, I'm Tuan Anh, a passionate self-taught frontEnd web developer.
 
-- 🔭 I’m currently working on Wasify 
+- 🔭 I’m currently working on Ants 
 - 🌱 I’m currently learning Javascript, ReactJS, CSS,  Python.
 - 👯 I’m looking to collaborate on [TAdev07](https://github.com/TAdev07.github.io)
 - 💬 Ask me about anything [here](https://github.com/TAdev07/TAdev07/issues)
